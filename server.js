@@ -1,7 +1,7 @@
 const express = require('express');
 require('dotenv').config();
 
-const contactRoutes = require('./routes/contact');
+const contactsRoutes = require('./routes/contact');
 const errorHandler = require('./middlewares/errorHandler');
 
 const app = express();
@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/api', contactRoutes);
+app.use('/', contactsRoutes);
 
 app.get('/', (req, res) => {
   res.json({ message: 'API CRUD de Contatos' });

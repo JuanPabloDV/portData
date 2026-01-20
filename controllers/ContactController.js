@@ -3,14 +3,14 @@ const prisma = new PrismaClient();
 
 class ContactController {
   static async create(req, res) {
-    const { name, phone } = req.body;
+    const { nome, telefone } = req.body;
 
-    if (!phone) {
+    if (!telefone) {
       return res.status(400).json({ error: 'Telefone é obrigatório' });
     }
 
     const contact = await prisma.contact.create({
-      data: { name, phone }
+      data: { nome, telefone }
     });
 
     res.status(201).json({
@@ -41,15 +41,15 @@ class ContactController {
 
   static async update(req, res) {
     const { id } = req.params;
-    const { name, phone } = req.body;
+    const { nome, telefone } = req.body;
 
-    if (!phone) {
+    if (!telefone) {
       return res.status(400).json({ error: 'Telefone é obrigatório' });
     }
 
     const contact = await prisma.contact.update({
       where: { id: parseInt(id) },
-      data: { name, phone }
+      data: { nome, telefone }
     });
 
     res.json({
@@ -65,7 +65,7 @@ class ContactController {
       where: { id: parseInt(id) }
     });
 
-    res.json({ message: 'Contato deletado com sucesso' });
+    res.status(204).send();
   }
 }
 

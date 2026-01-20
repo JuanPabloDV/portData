@@ -9,8 +9,8 @@ datasource db {
 
 model Contact {
   id        Int      @id @default(autoincrement())
-  name      String   @db.VarChar(255)
-  phone     String   @db.VarChar(20)
+  nome      String   @db.VarChar(255)
+  telefone     String   @db.VarChar(20)
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
 

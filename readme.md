@@ -53,11 +53,11 @@ A API estará disponível em `http://localhost:3000`
 
 ## Endpoints
 
-- `POST /api/contact` - Criar contato
-- `GET /api/contact` - Listar contatos
-- `GET /api/contact/:id` - Buscar por ID
-- `PUT /api/contact/:id` - Atualizar contato
-- `DELETE /api/contact/:id` - Deletar contato
+- `POST /contatos` - Criar contato
+- `GET /contatos` - Listar contatos
+- `GET /contatos/:id` - Buscar por ID
+- `PATCH /contatos/:id` - Atualizar contato
+- `DELETE /contatos/:id` - Deletar contato
 
 ## Validações
 

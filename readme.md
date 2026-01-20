@@ -14,12 +14,6 @@ Clone o repositório e instale as dependências:
 npm install
 ```
 
-Configure as variáveis de ambiente criando um arquivo `.env`:
-```
-DATABASE_URL="mysql://root:senha123@localhost:3306/portData_contact"
-PORT=3000
-```
-
 ## Banco de Dados
 
 Inicie o MySQL usando Docker:
